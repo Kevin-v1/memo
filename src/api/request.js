@@ -3,7 +3,7 @@ import wxAdapter from '../utils/wxAdapter';
 
 // 创建 axios 实例
 const request = axios.create({
-  baseURL: 'https://kqhsdclnqvle.sealosbja.site/api/v1',
+  baseURL: 'https://twicfngkiiwb.sealosbja.site/api/v1',
   timeout: 10000,
   adapter: wxAdapter,
   headers: {

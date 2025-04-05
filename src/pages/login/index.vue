@@ -120,6 +120,8 @@ const handleLogin = async () => {
         uni.setStorageSync('userInfo', userInfo.data);
       }
       
+      uni.hideLoading();
+      
       uni.showToast({
         title: '登录成功',
         icon: 'success'
@@ -132,6 +134,8 @@ const handleLogin = async () => {
         });
       }, 1500);
     } else {
+      uni.hideLoading();
+      
       uni.showToast({
         title: res.message || '登录失败',
         icon: 'none'
@@ -139,12 +143,12 @@ const handleLogin = async () => {
     }
   } catch (error) {
     console.error('登录失败:', error);
+    uni.hideLoading();
+    
     uni.showToast({
       title: '登录失败，请稍后重试',
       icon: 'none'
     });
-  } finally {
-    uni.hideLoading();
   }
 };
 
@@ -197,10 +201,12 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 150px 30px 30px;
+  padding: 120px 30px 30px;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  padding-top: calc(120px + constant(safe-area-inset-top));
+  padding-top: calc(120px + env(safe-area-inset-top));
 }
 
 // 背景装饰圆形

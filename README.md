@@ -78,19 +78,21 @@ npm run dev:app
 
 ## API接口
 
+基础地址：`https://twicfngkiiwb.sealosbja.site/api/v1`
+
 ### 用户认证
-- POST /api/v1/auth/login - 用户登录
-- POST /api/v1/auth/register - 用户注册
-- GET /api/v1/auth/user-info - 获取用户信息
-- POST /api/v1/auth/logout - 退出登录
+- POST /auth/login - 用户登录
+- POST /auth/register - 用户注册
+- GET /auth/user-info - 获取用户信息
+- POST /auth/logout - 退出登录
 
 ### 备忘录
-- GET /api/v1/memos - 获取备忘录列表
-- GET /api/v1/memos/:id - 获取备忘录详情
-- POST /api/v1/memos - 创建备忘录
-- PUT /api/v1/memos/:id - 更新备忘录
-- DELETE /api/v1/memos/:id - 删除备忘录
-- POST /api/v1/memos/batch-delete - 批量删除备忘录
+- GET /memos - 获取备忘录列表
+- GET /memos/:id - 获取备忘录详情
+- POST /memos - 创建备忘录
+- PUT /memos/:id - 更新备忘录
+- DELETE /memos/:id - 删除备忘录
+- POST /memos/batch-delete - 批量删除备忘录
 
 ## 开发团队
 

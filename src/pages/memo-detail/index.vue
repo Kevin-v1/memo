@@ -25,9 +25,11 @@
       <text class="memo-title">{{ memoTitle }}</text>
       
       <!-- 内容 -->
-      <scroll-view class="memo-content" scroll-y>
-        <text>{{ memoContent }}</text>
-      </scroll-view>
+      <view class="memo-content-wrapper">
+        <scroll-view class="memo-content" scroll-y enable-flex>
+          <text class="memo-text">{{ memoContent }}</text>
+        </scroll-view>
+      </view>
     </view>
   </view>
 </template>
@@ -210,17 +212,15 @@ function getOpenerEventChannel() {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  padding: 30px;
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+  box-sizing: border-box;
+  padding-top: calc(30px + constant(safe-area-inset-top));
+  padding-top: calc(30px + env(safe-area-inset-top));
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
 }
 
 // 背景装饰圆形
@@ -248,20 +248,18 @@ function getOpenerEventChannel() {
 // 备忘录详情卡片
 .detail-card {
   width: 100%;
-  max-width: 600px;
-  min-height: 90vh;
+  max-width: 500px;
+  min-height: 70vh;
   background-color: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 25px;
   position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  margin: 20px 0;
-  margin-top: 60px;
   box-sizing: border-box;
-  transform: translateZ(0);
+  margin-top: 44px;
 }
 
 // 关闭按钮
@@ -334,24 +332,34 @@ function getOpenerEventChannel() {
   padding-right: 30px;
 }
 
+// 备忘录内容包装器
+.memo-content-wrapper {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
 // 备忘录内容
 .memo-content {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
+  width: 100%;
+  height: 50vh;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
-  
-  text {
-    white-space: pre-wrap;
-    word-break: break-all;
-    width: 100%;
-    box-sizing: border-box;
-  }
+}
+
+// 备忘录文本
+.memo-text {
+  white-space: pre-wrap;
+  word-break: break-all;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  box-sizing: border-box;
 }
 </style> 

@@ -190,6 +190,8 @@ const handleBackToLogin = () => {
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  padding-top: calc(120px + constant(safe-area-inset-top));
+  padding-top: calc(120px + env(safe-area-inset-top));
 }
 
 // 背景装饰圆形
