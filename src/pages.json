@@ -1,0 +1,53 @@
+{
+  "pages": [
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/register/index",
+      "style": {
+        "navigationBarTitleText": "注册",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/memo/index",
+      "style": {
+        "navigationBarTitleText": "备忘录",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/memo-detail/index",
+      "style": {
+        "navigationBarTitleText": "备忘录详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/memo-add/index",
+      "style": {
+        "navigationBarTitleText": "新建备忘录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "备忘录",
+    "navigationBarBackgroundColor": "#a777e3",
+    "backgroundColor": "#F8F8F8"
+  },
+  "uniIdRouter": {}
+} 
